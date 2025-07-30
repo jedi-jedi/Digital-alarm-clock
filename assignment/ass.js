@@ -20,14 +20,11 @@ dateEl.textContent = dt.toLocaleDateString(undefined, date);
 
 
 
-// hoursEl.textContent = hours < 10? `0${hours}`:hours;
-// minutesEl.textContent = dt.getMinutes();
-
 
 
 
 let interval = setInterval(()=>{
-    //console.log("tick");
+
     
     const dt =  new Date()
 
@@ -43,39 +40,24 @@ let interval = setInterval(()=>{
 
 
 const alarm = (dt)=>{
-    //console.log('hekko');
+    
     
     if (!dt) return;
    
     audio.loop = true;
     const inputValue =inputEl.value;
-    //const dt = new Date()
     if (inputValue) {
         const[alarmHour, alarmMinute]=inputValue.split(":").map(Number)
 
         if (dt.getHours() === alarmHour && dt.getMinutes() === alarmMinute && !alarmStart && !wasRinging) {
-            //alert("stop")
+            
             audio.play()
             alarmStart = true
             wasRinging = true
         } else if(wasRinging && dt.getHours() !== alarmHour || dt.getMinutes() !== alarmMinute) {
-            stop();
-            //audio.pause();
-            // audio.currentTime = 0;
-            // alarmStart = false;
-
-            //alert("you missed your alarm at")
-        }
-
-        // if (dt.getHours() !== alarmHour || dt.getMinutes() !== alarmMinute) {
-        //     audio.pause();
-        //     audio.currentTime = 0;
-        //     alarmStart = false;
-        //     alert("you missed your alarm at")
-        // }
-    }
-    //console.log("alarm caled");
-    
+            stop();   
+        }  
+    }    
 }
 
 const stop =()=>{
@@ -92,20 +74,3 @@ const stop =()=>{
    
 
 }
-
-
-// const snooze =()=>{
-//     console.log("hhhh");
-    
-//     audio.pause();
-//     audio.currentTime = 0;
-
-//     const dt = new Date();
-//     dt.setMinutes(dt.getMinutes() + 1);
-
-//     snuze = dt;
-//     alarmStart = false
-
-//     alert("snooze for 1min");
-// }
-
