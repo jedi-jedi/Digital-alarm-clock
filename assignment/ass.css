@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+            font-family: "Digital7";
+            src: url("./fonts/digital-7\ \(mono\).ttf") format("truetype");
+        }
+
+        body{
+            /* margin: auto; */
+            justify-content: center;
+            align-items: center; 
+            font-family: "Digital7", monospace;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 13%;
+            background-color: black;
+        }
+
+       
+
+        .number{
+            color: #00FE7E;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .number h2{
+            font-size: 12vw;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+        }
+
+        p{
+            color: #00FE7E;
+            font-size: 4.5vw;
+            text-shadow: 0 0 5px #39ff14;
+        }
+
+        button{
+            width: fit-content;
+        }
